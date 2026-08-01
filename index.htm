@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9ec4,#ffc8dd);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+}
+
+h1{
+font-size:45px;
+color:white;
+margin-bottom:40px;
+}
+
+button{
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+
+#yes{
+background:#ff2e63;
+color:white;
+margin-right:20px;
+}
+
+#yes:hover{
+transform:scale(1.1);
+}
+
+#no{
+background:white;
+color:#ff2e63;
+position:absolute;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>Do You Love Me? ❤️</h1>
+
+<button id="yes">YES 💖</button>
+<button id="no">NO 💔</button>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+function moveButton(){
+
+let x=Math.random()*(window.innerWidth-150);
+
+let y=Math.random()*(window.innerHeight-80);
+
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+}
+
+no.addEventListener("mouseover",moveButton);
+no.addEventListener("click",moveButton);
+
+document.getElementById("yes").onclick=()=>{
+location.href="love.html";
+}
+
+</script>
+
+</body>
+</html>
